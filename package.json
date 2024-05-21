@@ -1,0 +1,38 @@
+{
+  "name": "assignment-8-backend",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.ts",
+    "start:prod": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
+    "lint": "eslint src --ignore-path .eslintignore --ext .js,.ts,.json",
+    "lint:fix": "npx lint --fix",
+    "prettier": "prettier --ignore-path .prettierignore --write \"./src/**/*.+(js|ts|json)\"",
+    "prettier:check": "npx prettier --ignore-path .prettierignore --check \"./src/**/*.+(js|ts|json)\"",
+    "build": "tsc",
+    "prepare": "husky || true"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "http-status": "^1.7.4",
+    "mongoose": "^8.2.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.2"
+  }
+}
